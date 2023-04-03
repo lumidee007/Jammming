@@ -25,7 +25,7 @@ import PlayList from "../PlayList/PlayList";
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+    (this.state = {
       searchResults: [
         {
           id: 1,
@@ -64,11 +64,12 @@ export default class App extends Component {
           album: "Back to life",
         },
       ],
-      playlistName: "Olumide",
+      playlistName: "Def Jamz",
       playlistTracks: [],
-    };
-    (this.addTrack = this.addTrack.bind(this)),
-      (this.removeTrack = this.removeTrack.bind(this));
+    }),
+      (this.addTrack = this.addTrack.bind(this)),
+      (this.removeTrack = this.removeTrack.bind(this)),
+      (this.updatePlaylistName = this.updatePlaylistName.bind(this));
   }
 
   addTrack(track) {
@@ -89,10 +90,13 @@ export default class App extends Component {
     this.setState({ playlistTracks: tracks });
   }
 
+  updatePlaylistName(name) {
+    this.setState({ playlistName: name });
+  }
+
   render() {
     return (
       <div>
-        2
         <h1>
           Ja<span className="highlight">mmm</span>ing
         </h1>
@@ -107,6 +111,7 @@ export default class App extends Component {
               playlistTracks={this.state.playlistTracks}
               playlistName={this.state.playlistName}
               removeTrack={this.removeTrack}
+              updatePlaylistName={this.updatePlaylistName}
             />
           </div>
         </div>
