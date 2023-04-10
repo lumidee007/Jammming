@@ -2,12 +2,30 @@ import React from "react";
 import "./Playlist.styles.css";
 import TrackList from "../TrackList/TrackList";
 
-export default function Playlist() {
+export default function PlayList({
+  playlistTracks,
+  playlistName,
+  removeTrack,
+  updatePlaylistName,
+  savePlaylist,
+}) {
+  //Event has been deprecated. Chec for the new event handler.
+
+  const handleNameChange = (event) => {
+    updatePlaylistName(event.target.value);
+  };
+
   return (
     <div className="Playlist">
-      <input value={"New Playlist"} />
-      <TrackList />
-      <button className="Playlist-save">SAVE TO SPOTIFY</button>
+      <input value={playlistName} onChange={handleNameChange} />
+      <TrackList
+        tracks={playlistTracks}
+        removeTrack={removeTrack}
+        isRemoval={true}
+      />
+      <button className="Playlist-save" onClick={savePlaylist}>
+        SAVE TO SPOTIFY
+      </button>
     </div>
   );
 }
