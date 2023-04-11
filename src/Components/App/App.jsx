@@ -3,30 +3,13 @@ import React, { Component } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
 import PlayList from "../PlayList/PlayList";
-
-// function App() {
-
-//   return (
-//     <div>
-//       <h1>
-//         Ja<span className="highlight">mmm</span>ing
-//       </h1>
-//       <div className="App">
-//         <SearchBar />
-//         <div className="App-playlist">
-//           <SearchResults />
-//           <Playlist />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
+import Spotify from "../../util/Spotify";
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     (this.state = {
-      searchResults: [
+      ssearchResults: [
         {
           id: 1,
           name: "Califonia gangster",
@@ -70,6 +53,7 @@ export default class App extends Component {
           uri: "spotify:track:6",
         },
       ],
+      searchResults: [],
       playlistName: "Def Jamz",
       playlistTracks: [],
     }),
@@ -109,7 +93,10 @@ export default class App extends Component {
   }
 
   search(term) {
-    console.log(term);
+    Spotify.search(term).then((result) => {
+      this.setState({ searchResults: result });
+    });
+    console.log("Searching for", term);
   }
 
   render() {
@@ -138,5 +125,3 @@ export default class App extends Component {
     );
   }
 }
-
-// export default App;
