@@ -9,50 +9,6 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     (this.state = {
-      ssearchResults: [
-        {
-          id: 1,
-          name: "Califonia gangster",
-          artist: "Sean Combs",
-          album: "Back to life",
-          uri: "spotify:track:1",
-        },
-        {
-          id: 2,
-          name: "Damiduro",
-          artist: "Davido",
-          album: "Easy life",
-          uri: "spotify:track:2",
-        },
-        {
-          id: 17,
-          name: "Califonia gangster",
-          artist: "Nelly Futardo",
-          album: "Back to life",
-          uri: "spotify:track:3",
-        },
-        {
-          id: 18,
-          name: "City of fun",
-          artist: "Sean Combs",
-          album: "Back to life",
-          uri: "spotify:track:4",
-        },
-        {
-          id: 27,
-          name: "Califonia gangster",
-          artist: "James Brown",
-          album: "Back to life",
-          uri: "spotify:track:5",
-        },
-        {
-          id: 35,
-          name: "Califonia gangster",
-          artist: "Sean Combs",
-          album: "Back to life",
-          uri: "spotify:track:6",
-        },
-      ],
       searchResults: [],
       playlistName: "Def Jamz",
       playlistTracks: [],
