@@ -9,8 +9,6 @@ export default function PlayList({
   updatePlaylistName,
   savePlaylist,
 }) {
-  //Event has been deprecated. Chec for the new event handler.
-
   const handleNameChange = (event) => {
     updatePlaylistName(event.target.value);
   };
