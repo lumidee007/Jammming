@@ -2,7 +2,7 @@
 
 ![Jammmng_F_page](./public/images/Jammmng_F_page.jpeg)
 
-![spotify_playlist](./public/img/spotify_playlist.jpeg)
+![spotify_playlist](./public/images/spotify_playlist.jpeg)
 
 Jammming is a React app that uses the Spotify API to allow users to search for music tracks, select some of their favorites, and create a playlist in their Spotify account. The app utilizes different Spotify API endpoints, including https://api.spotify.com/v1/search?type=track&q=${term}, https://api.spotify.com/v1/me, https://api.spotify.com/v1/users/${userID}/playlists, and https://api.spotify.com/v1/playlists/${playlist_id}/tracks.
 
